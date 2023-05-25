@@ -19,3 +19,10 @@ module "write" {
   answer_4 = var.answers[3]
   answer_5 = var.answers[4]
 }
+
+module "data" {
+  source = "./modules/data"
+
+  path = var.path
+  depends_on = [ module.files ]
+}
