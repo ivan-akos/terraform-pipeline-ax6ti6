@@ -9,3 +9,7 @@ output "read" {
 output "write" {
   value = module.write
 }
+
+output "data" {
+  value = module.data
+}
