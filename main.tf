@@ -23,6 +23,6 @@ module "write" {
 module "data" {
   source = "./modules/data"
 
-  path = var.path
+  path = module.files.file_path
   depends_on = [ module.files ]
 }
