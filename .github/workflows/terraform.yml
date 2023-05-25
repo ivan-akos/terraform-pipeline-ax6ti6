@@ -34,8 +34,12 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    # Checks that all Terraform configuration files adhere to a canonical format
+    # Formats Terraform configs
     - name: Terraform Format
+      run: terraform fmt
+      
+    # Checks that all Terraform configuration files adhere to a canonical format
+    - name: Terraform Format Check
       run: terraform fmt -check
 
     # Generates an execution plan for Terraform
